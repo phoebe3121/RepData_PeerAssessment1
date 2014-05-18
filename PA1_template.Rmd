@@ -42,7 +42,7 @@ print(paste("The median steps per day is:",round(medianstepsperday, digit=2)))
 **1. Make a time series plot (i.e. `type = "l"`) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis).**
 ```{r meanstepsperinterval, fig.height=5,fig.width=5}
 meanstepsbyinterval <- aggregate(activity$steps, by=list(activity$interval),mean,na.rm=TRUE)
-with(meanstepsbyinterval, plot(Group.1,x,type="l"))
+with(meanstepsbyinterval, plot(Group.1,x,type="l",xlab="Interval",ylab="Average Number of Steps",main="Average Daily Activity Pattern"))
 ```
 
 **2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?**

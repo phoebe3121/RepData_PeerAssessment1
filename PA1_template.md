@@ -65,7 +65,8 @@ print(paste("The median steps per day is:", round(medianstepsperday, digit = 2))
 ```r
 meanstepsbyinterval <- aggregate(activity$steps, by = list(activity$interval), 
     mean, na.rm = TRUE)
-with(meanstepsbyinterval, plot(Group.1, x, type = "l"))
+with(meanstepsbyinterval, plot(Group.1, x, type = "l", xlab = "Interval", ylab = "Average Number of Steps", 
+    main = "Average Daily Activity Pattern"))
 ```
 
 ![plot of chunk meanstepsperinterval](figure/meanstepsperinterval.png) 
